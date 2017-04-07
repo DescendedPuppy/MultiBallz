@@ -187,8 +187,8 @@ public class Test extends Application {
 	}
 
 	public void bounce(Group n, Circle c) {
-		if (n.getBoundsInParent().getMaxY()+1 <= c.getBoundsInParent().getMinY()
-				|| n.getBoundsInParent().getMinY() >= c.getBoundsInParent().getMaxY()+1)
+		if (n.getBoundsInParent().getMaxY()-1 <= c.getBoundsInParent().getMinY()
+				|| n.getBoundsInParent().getMinY() >= c.getBoundsInParent().getMaxY()-1)
 			setDeltaY(deltaY*-1);
 		else
 			setDeltaX(deltaX*-1);

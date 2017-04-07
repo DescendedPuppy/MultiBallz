@@ -8,11 +8,12 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import at.sem.server.Client.java;
+import at.sem.server.Client;
 
 public class JoinGame {
 
-	public JoinGame() {}
+	public JoinGame m;
+	public JoinGame() {m=this;}
 	
 	public BorderPane start(){
 		BorderPane pane = new BorderPane();
@@ -25,8 +26,7 @@ public class JoinGame {
 		enterIp.setOnAction(new EventHandler<ActionEvent>(){
 			@Override
 			public void handle(ActionEvent event) {
-				Client client = new Client(ip.getText(), 6969, this);
-				if()
+				Client client = new Client(ip.getText(), m);
 			}
 		});
 		
